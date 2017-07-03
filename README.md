@@ -1,12 +1,6 @@
 # openssh-7.5p1-Solaris
 Compile openssh-7.5p1 for Solaris X86
-#################################################################################
-# Author: Calvin(Baodong) Yu
-# Date: 2017-06-30
-# Description:
-#    This is for the compiling openssh-7.5p1 for Solaris X86 server
-#################################################################################
-
+This is for the compiling openssh-7.5p1 for Solaris X86 server
 All the installations below are to local directories under your home directories.
 
 1.Packages
@@ -36,7 +30,7 @@ make install
 
 5.Compile Openssl:
 5.1. Generate Makefile
-cd /home/users/cyu/openssh/openssl-1.0.2l/
+cd /home/users/yourhome/openssh/openssl-1.0.2l/
 mkdir output
 ./config shared --prefix=/home/users/yourhome/openssh/openssl-1.0.2l/output --openssldir=/home/users/yourhome/openssh/openssl-1.0.2l/output/openssl
 

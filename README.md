@@ -78,7 +78,21 @@ Change the configure file as the following:
 make
 make install
 
-7.Verification
+7.Configuration file
+Create new configuration file: /reuters/pkgs/xxx/.ssh/ssh_my_config
+
+IdentityFile /usr/pkgs/xxx/.ssh/id_rsa_my_private_key
+StrictHostKeyChecking no
+GssapiDelegateCredentials no
+GssapiAuthentication no
+GssapiKeyExchange no
+PubkeyAuthentication yes
+PasswordAuthentication no
+Port=[sftp_server_port]
+#MACs=hmac-sha2-256
+#ProxyCommand /usr/lib/ssh/ssh-socks5-proxy-connect -h [your_proxy_ip] -p 1080 [sftp_server_ip] [sftp_server_port]
+
+8.Verification
 You need to do the test in a Solars X86 machine which can connect to target server:
 
 cd /home/users/yourname/openssh/openssh-7.5p1/output/bin

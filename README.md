@@ -1,4 +1,4 @@
-# openssh-7.5p1-Solaris
+# openssh-7.5p1-Solaris-X86
 Compile openssh-7.5p1 for Solaris X86
 This is for the compiling openssh-7.5p1 for Solaris X86 server
 All the installations below are to local directories under your home directories.

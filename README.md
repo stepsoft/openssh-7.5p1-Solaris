@@ -6,7 +6,9 @@ All the installations below are to local directories under your home directories
 1.Packages
 
 zlib-1.2.11.tar.gz (From http://zlib.net/ )
+
 openssl-1.0.2l.tar.gz  (From https://www.openssl.org/source/openssl-1.0.2l.tar.gz )
+
 openssh-7.5p1.tar.gz   (From https://mirror.aarnet.edu.au/pub/OpenBSD/OpenSSH/portable/openssh-7.5p1.tar.gz )
 
 2.Working diretories for compiling

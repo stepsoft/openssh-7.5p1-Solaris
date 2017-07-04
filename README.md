@@ -12,47 +12,77 @@ openssl-1.0.2l.tar.gz  (From https://www.openssl.org/source/openssl-1.0.2l.tar.g
 openssh-7.5p1.tar.gz   (From https://mirror.aarnet.edu.au/pub/OpenBSD/OpenSSH/portable/openssh-7.5p1.tar.gz )
 
 2.Working diretories for compiling
+
 Root directory of src and bin files: /home/users/yourhome/openssh/
+
 Openssh directory:  /home/users/yourhome/openssh-7.5p1/
+
 Openssl directory:  /home/users/yourhome/openssl-1.0.2l/
+
 Zlib directory: /home/users/yourhomezlib-1.2.11/
 
+
 3.Compilers:
+
 Please be sure that you have the C compiler installed. I tested it in Sun's cc
+
 i.e. /usr1/studio12.1/bin/cc
 
 Set enviorment viarables like the following:
+
 PATH=.:/usr1/studio12.1/bin/:$PATH
+
 LD_LIBRARY_PATH=/home/users/yourhome/openssh/openssl-1.0.2l/output/lib:$LD_LIBRARY_PATH
 
+
 4.Compile zlib :
+
 cd /home/users/yourhome/openssh/zlib-1.2.11
+
 mkdir /output
+
 ./configure --prefix=/home/users/yourhome/openssh/zlib-1.2.11/output
+
 make test
+
 make install 
 
+
 5.Compile Openssl:
+
 5.1. Generate Makefile
+
 cd /home/users/yourhome/openssh/openssl-1.0.2l/
+
 mkdir output
+
 ./config shared --prefix=/home/users/yourhome/openssh/openssl-1.0.2l/output --openssldir=/home/users/yourhome/openssh/openssl-1.0.2l/output/openssl
 
+
 5.2. Modify Makefile 
-Changed the out-of-date parameter in Makefile
-From -xarchamd64 to -m64
+
+Changed the out-of-date parameter in Makefile from -xarchamd64 to -m64
 
 5.3. Make install
+
 make
+
 make test
+
 make install
 
+
 6.OpenSSH Compiling:
+
 6.1.Generate Makefile
+
 cd /home/users/yourhome/openssh/openssh-7.5p1
+
 mkdir output
 
+
 Change the configure file as the following:
+
     #Original
     #if test -n "${need_dash_r}"; then
     #   LDFLAGS="-L/usr/local/ssl/lib -R/usr/local/ssl/lib ${saved_LDFLAGS}"

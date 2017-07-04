@@ -101,12 +101,19 @@ Change the configure file as the following:
 
 
 ./configure \
+
   --prefix=/home/users/yourhome/openssh/openssh-7.5p1/output \
+  
   --sysconfdir=/home/users/yourhome/openssh/openssh-7.5p1/output/etc/ssh \
+  
   --with-ssl-dir=/home/users/yourhome/openssh/openssl-1.0.2l/output \
+  
   --with-zlib=/home/users/yourhome/openssh/zlib-1.2.11/output \
+  
     --with-cppflags=-m64     --with-cflags=-m64 --with-ldflags=-m64 \
+    
 	--with-privsep-path=/home/users/yourhome/openssh/openssh-7.5p1/output/var/empty	
+	
 
 6.2.Make install
 make

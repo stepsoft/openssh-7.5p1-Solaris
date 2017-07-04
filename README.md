@@ -110,9 +110,9 @@ Change the configure file as the following:
   
   --with-zlib=/home/users/yourhome/openssh/zlib-1.2.11/output \
   
-    --with-cppflags=-m64     --with-cflags=-m64 --with-ldflags=-m64 \
-    
-	--with-privsep-path=/home/users/yourhome/openssh/openssh-7.5p1/output/var/empty	
+  --with-cppflags=-m64     --with-cflags=-m64 --with-ldflags=-m64 \
+  
+  --with-privsep-path=/home/users/yourhome/openssh/openssh-7.5p1/output/var/empty	
 	
 
 6.2.Make install
@@ -158,10 +158,7 @@ ldd -d sftp
 
 Test Connection:
 ./sftp -vvv -o IdentityFile=/usr/pkgs/xxx/.ssh/id_rsa_my_private_key -F /reuters/pkgs/xxx/.ssh/ssh_my_config \
-
-	-S /home/users/yourhome/openssh/openssh-7.5p1/output/bin/ssh  \
-	
-    sftp_user_name@ip_address_to_sftp_server
+-S /home/users/yourhome/openssh/openssh-7.5p1/output/bin/ssh sftp_user_name@ip_address_to_sftp_server
     
  i.e. sftp_user_name@ip_address_to_sftp_server  like sftp_user@187.98.123.23
 	

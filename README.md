@@ -4,14 +4,16 @@ This is for the compiling openssh-7.5p1 for Solaris X86 server
 All the installations below are to local directories under your home directories.
 
 1.Packages
-zlib-1.2.11.tar.gz
-openssl-1.0.2l.tar.gz  
-openssh-7.5p1.tar.gz   
+
+zlib-1.2.11.tar.gz (From http://zlib.net/ )
+openssl-1.0.2l.tar.gz  (From https://www.openssl.org/source/openssl-1.0.2l.tar.gz )
+openssh-7.5p1.tar.gz   (From https://mirror.aarnet.edu.au/pub/OpenBSD/OpenSSH/portable/openssh-7.5p1.tar.gz )
 
 2.Working diretories for compiling
 Root directory of src and bin files: /home/users/yourhome/openssh/
-Openssh root directory:  /home/users/yourhome/openssh-7.5p1/
-Openssl root directory:  /home/users/yourhome/openssl-1.0.2l/
+Openssh directory:  /home/users/yourhome/openssh-7.5p1/
+Openssl directory:  /home/users/yourhome/openssl-1.0.2l/
+Zlib directory: /home/users/yourhomezlib-1.2.11/
 
 3.Compilers:
 Please be sure that you have the C compiler installed. I tested it in Sun's cc

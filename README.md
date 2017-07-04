@@ -116,22 +116,35 @@ make install
 Create new configuration file: /reuters/pkgs/xxx/.ssh/ssh_my_config
 
 IdentityFile /usr/pkgs/xxx/.ssh/id_rsa_my_private_key
+
 StrictHostKeyChecking no
+
 GssapiDelegateCredentials no
+
 GssapiAuthentication no
+
 GssapiKeyExchange no
+
 PubkeyAuthentication yes
+
 PasswordAuthentication no
+
 Port=[sftp_server_port]
+
 #MACs=hmac-sha2-256
+
 #ProxyCommand /usr/lib/ssh/ssh-socks5-proxy-connect -h [your_proxy_ip] -p 1080 [sftp_server_ip] [sftp_server_port]
+
 
 8.Verification
 You need to do the test in a Solars X86 machine which can connect to target server:
 
 cd /home/users/yourname/openssh/openssh-7.5p1/output/bin
+
 LD_LIBRARY_PATH=/home/users/yourname/openssh/openssl-1.0.2l/output/lib:$LD_LIBRARY_PATH
+
 PATH=/home/users/yourname/openssh/openssh-7.5p1/output/bin:$PATH
+
 
 The following can show which library the sftp calls:
 ldd -d sftp
@@ -140,11 +153,16 @@ AIAF Test Server:
 ./sftp -vvv -o IdentityFile=/usr/pkgs/xxx/.ssh/id_rsa_my_private_key -F /reuters/pkgs/xxx/.ssh/ssh_my_config \
 	-S /home/users/yourhome/openssh/openssh-7.5p1/output/bin/ssh  \
     sftp_user_name@ip_address_to_sftp_server
+    
  i.e. sftp_user_name@ip_address_to_sftp_server  like sftp_user@187.98.123.23
 	
 
 8.How to generate private/public keys:
-ssh-keygen -b 2048 -t rsa -f id_rsa_my_private_key -C my_private_key_comment_20170703
+
+ssh-keygen -b 2048 -t rsa -f id_rsa_my_private_key -C 
+
 Two files generated: id_rsa_my_private_key(private key), id_rsa_my_private_key.pub(public key)
+
 Send your public key to your target server, and need to add it to server's  /reuters/pkgs/xxx/.ssh/known_hosts
+
 	

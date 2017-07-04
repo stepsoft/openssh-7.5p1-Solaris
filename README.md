@@ -149,9 +149,11 @@ PATH=/home/users/yourname/openssh/openssh-7.5p1/output/bin:$PATH
 The following can show which library the sftp calls:
 ldd -d sftp
 
-AIAF Test Server:
+Test Connection:
 ./sftp -vvv -o IdentityFile=/usr/pkgs/xxx/.ssh/id_rsa_my_private_key -F /reuters/pkgs/xxx/.ssh/ssh_my_config \
+
 	-S /home/users/yourhome/openssh/openssh-7.5p1/output/bin/ssh  \
+	
     sftp_user_name@ip_address_to_sftp_server
     
  i.e. sftp_user_name@ip_address_to_sftp_server  like sftp_user@187.98.123.23
